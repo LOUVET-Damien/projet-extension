@@ -27,10 +27,16 @@ let PixeledCatImages = [
     "https://tinyurl.com/5yp9nvzt",
     "https://tinyurl.com/mmca93br",
     "https://tinyurl.com/yue9fmuf",
-    "https://tinyurl.com/ycy7fnp9"
+    "https://tinyurl.com/ycy7fnp9",
+    "https://i.imgur.com/KK2N3D0.jpeg",
+    "https://i.imgur.com/JRE0Fpa.jpeg",
+    "https://i.imgur.com/zZ7a0aE.jpeg",
+    "https://i.imgur.com/OIYkPoy.jpeg",
+    "https://i.imgur.com/XDdKwd7.jpeg",
+    "https://i.imgur.com/fhc0kzm.jpeg",
+    "https://i.imgur.com/fiwU0tR.jpeg"
 ];
 
-// Fonction pour remplacer une image par une aléatoire
 function replaceImage(img) {
     const index = Math.floor(Math.random() * PixeledCatImages.length);
     img.src = PixeledCatImages[index];
@@ -39,7 +45,6 @@ function replaceImage(img) {
 // Remplacer toutes les images déjà présentes
 document.querySelectorAll("img").forEach(img => replaceImage(img));
 
-// Observer les nouvelles images ajoutées dynamiquement
 const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         mutation.addedNodes.forEach(node => {
@@ -52,5 +57,4 @@ const observer = new MutationObserver(mutations => {
     });
 });
 
-// Observer tout le document pour les enfants ajoutés
 observer.observe(document.body, { childList: true, subtree: true });
