@@ -6,7 +6,7 @@ const totalSounds = 1;
 const sounds = [];
 
 for (let i = 1; i <= totalSounds; i++) {
-    sounds.push(chrome.runtime.getURL(`sounds/${i}.mp3`));
+    sounds.push(chrome.runtime.getURL(`/ressources/sounds/${i}.mp3`));
 }
 
 function playRandomSound() {
@@ -36,7 +36,7 @@ document.addEventListener("click", function (e) {
 
     // Crée la vidéo
     let video = document.createElement("video");
-    video.src = "https://www.youtube.com/watch?v=cA1PDrOA0Q4";
+    video.src = "ressources/video/justevideo.mp4";
     video.autoplay = true;
     video.muted = true;       // 🔇 pas de son
     video.playsInline = true; // utile sur mobile
