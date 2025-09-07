@@ -36,7 +36,7 @@ document.addEventListener("click", function (e) {
 
     // Crée la vidéo
     let video = document.createElement("video");
-    video.src = "https://www.w3schools.com/html/mov_bbb.mp4"; // remplace par ton fichier
+    video.src = "https://www.youtube.com/watch?v=cA1PDrOA0Q4";
     video.autoplay = true;
     video.muted = true;       // 🔇 pas de son
     video.playsInline = true; // utile sur mobile
