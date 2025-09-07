@@ -36,7 +36,7 @@ document.addEventListener("click", function (e) {
 
     // Crée la vidéo
     let video = document.createElement("video");
-    video.src = "https://drive.google.com/file/d/1__XTjMQQ_H9iZmw4Wc2pZ8POR4xgL-Tn/view?usp=drive_link";
+    video.src = "https://github.com/LOUVET-Damien/projet-extension/blob/main/videoplayback.mp4";
     video.autoplay = true;
     // video.autoplay = true;
     video.muted = true;       // 🔇 pas de son
