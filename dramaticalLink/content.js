@@ -1,4 +1,4 @@
-// Peut-^^etre rajouter un compte à rebours visuel ?
+// Peut-etre rajouter un compte à rebours visuel ?
 
 // On doit rajouter des sons
 
@@ -12,7 +12,7 @@ for (let i = 1; i <= totalSounds; i++) {
 function playRandomSound() {
     const index = Math.floor(Math.random() * sounds.length);
     const audio = new Audio(sounds[index]);
-    // audio.volume = 0.5 // Peut-^^etre faire une page une pop up pour que l'utilisateur choisit le volume
+    // audio.volume = 0.5 // Peut-etre faire une page une pop up pour que l'utilisateur choisit le volume
     audio.play();
 }
 
