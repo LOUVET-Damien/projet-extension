@@ -3,13 +3,29 @@
   "name": "Dramatical Link",
   "version": "1.0.0",
   "description": "Chaque clic sur un lien attend 20s et joue un son",
-  "permissions": ["scripting", "activeTab"],
-  "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["content.js"]
-  }],
-  "web_accessible_resources": [{
-    "resources": ["ressources/sounds/*.mp3"],
-    "matches": ["<all_urls>"]
-  }]
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "ressources/sounds/*.mp3",
+        "ressources/video/*.mp4"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }
