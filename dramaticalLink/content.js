@@ -36,7 +36,7 @@ document.addEventListener("click", function (e) {
 
     // Crée la vidéo
     let video = document.createElement("video");
-    video.src = "/dramaticalLink/ressources/video/justevideo.mp4";
+    video.src = chrome.runtime.getURL("ressources/video/justevideo.mp4")
     video.autoplay = true;
     video.muted = true;       // 🔇 pas de son
     video.playsInline = true; // utile sur mobile

@@ -9,7 +9,7 @@
     "js": ["content.js"]
   }],
   "web_accessible_resources": [{
-    "resources": ["sounds/*.mp3"],
+    "resources": ["ressources/sounds/*.mp3", "ressources/video/*.mp4"],
     "matches": ["<all_urls>"]
   }]
 }
