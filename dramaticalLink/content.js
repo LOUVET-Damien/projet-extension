@@ -28,43 +28,43 @@ document.addEventListener("click", function(e) {
     }
 }, true);
 
-document.addEventListener("click", function (e) {
-  if (e.target.tagName === "A") {
-    e.preventDefault(); // Empêche la navigation
+// document.addEventListener("click", function (e) {
+//   if (e.target.tagName === "A") {
+//     e.preventDefault(); // Empêche la navigation
 
-    let url = e.target.href;
+//     let url = e.target.href;
 
-    // Crée la vidéo
-    let video = document.createElement("video");
-    video.src = "/ressources/video/justevideo.mp4";
-    video.autoplay = true;
-    video.muted = true;       // 🔇 pas de son
-    video.playsInline = true; // utile sur mobile
-    video.removeAttribute("controls"); // supprime les boutons
+//     // Crée la vidéo
+//     let video = document.createElement("video");
+//     video.src = "/ressources/video/justevideo.mp4";
+//     video.autoplay = true;
+//     video.muted = true;       // 🔇 pas de son
+//     video.playsInline = true; // utile sur mobile
+//     video.removeAttribute("controls"); // supprime les boutons
 
-    // Style plein écran simulé
-    video.style.position = "fixed";
-    video.style.top = "0";
-    video.style.left = "0";
-    video.style.width = "100%";
-    video.style.height = "100%";
-    video.style.objectFit = "cover";
-    video.style.zIndex = "999999";
+//     // Style plein écran simulé
+//     video.style.position = "fixed";
+//     video.style.top = "0";
+//     video.style.left = "0";
+//     video.style.width = "100%";
+//     video.style.height = "100%";
+//     video.style.objectFit = "cover";
+//     video.style.zIndex = "999999";
 
-    document.body.appendChild(video);
+//     document.body.appendChild(video);
 
-    // Demande le mode plein écran natif
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if (video.webkitRequestFullscreen) { // Safari
-      video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) { // IE/Edge
-      video.msRequestFullscreen();
-    }
+//     // Demande le mode plein écran natif
+//     if (video.requestFullscreen) {
+//       video.requestFullscreen();
+//     } else if (video.webkitRequestFullscreen) { // Safari
+//       video.webkitRequestFullscreen();
+//     } else if (video.msRequestFullscreen) { // IE/Edge
+//       video.msRequestFullscreen();
+//     }
 
-    // Quand la vidéo se termine → ouvre le lien
-    video.onended = () => {
-      window.location.href = url;
-    };
-  }
-});
+//     // Quand la vidéo se termine → ouvre le lien
+//     video.onended = () => {
+//       window.location.href = url;
+//     };
+//   }
+// });
