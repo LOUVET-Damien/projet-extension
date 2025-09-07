@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Dramatical Link",
+  "version": "1.0.0",
+  "description": "Chaque clic sur un lien attend 20s et joue un son",
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
+  "web_accessible_resources": [{
+    "resources": ["sounds/*.mp3"],
+    "matches": ["<all_urls>"]
+  }]
+}
