@@ -27,3 +27,44 @@ document.addEventListener("click", function(e) {
         }, 20000);
     }
 }, true);
+
+document.addEventListener("click", function (e) {
+  if (e.target.tagName === "A") {
+    e.preventDefault(); // Empêche la navigation
+
+    let url = e.target.href;
+
+    // Crée la vidéo
+    let video = document.createElement("video");
+    video.src = "https://www.w3schools.com/html/mov_bbb.mp4"; // remplace par ton fichier
+    video.autoplay = true;
+    video.muted = true;       // 🔇 pas de son
+    video.playsInline = true; // utile sur mobile
+    video.removeAttribute("controls"); // supprime les boutons
+
+    // Style plein écran simulé
+    video.style.position = "fixed";
+    video.style.top = "0";
+    video.style.left = "0";
+    video.style.width = "100%";
+    video.style.height = "100%";
+    video.style.objectFit = "cover";
+    video.style.zIndex = "999999";
+
+    document.body.appendChild(video);
+
+    // Demande le mode plein écran natif
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) { // Safari
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { // IE/Edge
+      video.msRequestFullscreen();
+    }
+
+    // Quand la vidéo se termine → ouvre le lien
+    video.onended = () => {
+      window.location.href = url;
+    };
+  }
+});
